@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="李寓恆春的家｜包棟民宿｜親子友善・閨蜜旅遊首選｜屏東縣政府合法民宿編號1124">
+<title>李寓恆春的家｜包棟民宿｜親子友善・閨蜜首選</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#F5F0E8;--sand-light:#FAF8F3;--earth:#8B7355;--earth-dark:#6B5740;--terracotta:#C4704A;--terracotta-soft:#D4885E;--ocean:#5B8A8A;--forest:#5C7A5C;--charcoal:#2D2A26;--warm-white:#FEFCF8;--warm-gray:#9E9688;--cream:#EDE8DE;--gold:#C9A96E;--serif:'Noto Serif TC',serif;--sans:'Noto Sans TC',sans-serif;--shadow-sm:0 2px 8px rgba(45,42,38,.06);--shadow-md:0 4px 20px rgba(45,42,38,.1);--shadow-lg:0 12px 40px rgba(45,42,38,.12);--radius:16px;--radius-sm:10px;--tr:.35s cubic-bezier(.4,0,.2,1)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--charcoal);background:var(--warm-white);line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:14px 0;transition:var(--tr);background:transparent}
+.nav.scrolled{background:rgba(254,252,248,.92);backdrop-filter:blur(14px);box-shadow:var(--shadow-sm);padding:8px 0}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--serif);font-weight:700;font-size:1.2rem;color:#fff;text-decoration:none;letter-spacing:1px;transition:color var(--tr)}
+.nav.scrolled .nav-logo{color:var(--charcoal)}.nav-logo span{color:var(--terracotta)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,.9);font-size:.88rem;font-weight:500;letter-spacing:.5px;position:relative;transition:color var(--tr)}
+.nav.scrolled .nav-links a{color:var(--charcoal)}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--terracotta);transition:width var(--tr)}
+.nav-links a:hover{color:var(--terracotta)}.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--terracotta)!important;color:#fff!important;padding:9px 22px;border-radius:50px;font-weight:600!important;font-size:.84rem!important;transition:all var(--tr)!important}
+.nav-cta:hover{background:var(--earth-dark)!important;transform:translateY(-1px)}.nav-cta::after{display:none!important}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;margin:6px 0;transition:var(--tr)}
+.nav.scrolled .hamburger span{background:var(--charcoal)}
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:var(--warm-white);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mobile-menu.active{display:flex}
+.mobile-menu a{font-family:var(--serif);font-size:1.4rem;color:var(--charcoal);text-decoration:none;font-weight:600}
+.mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:2rem;cursor:pointer;color:var(--charcoal)}
+
+/* HERO */
+.hero{height:100vh;min-height:600px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-bg{position:absolute;inset:0}.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(45,42,38,.08)0%,rgba(45,42,38,.22)40%,rgba(45,42,38,.52)100%)}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px;animation:heroIn 1s ease-out}
+@keyframes heroIn{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);padding:8px 24px;border-radius:50px;color:#fff;font-size:.82rem;letter-spacing:2px;font-weight:500;margin-bottom:20px}
+.hero h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.45;margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,.12)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:clamp(.95rem,2vw,1.1rem);color:rgba(255,255,255,.9);margin-bottom:36px;font-weight:300;line-height:1.9}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--terracotta);color:#fff;padding:15px 36px;border-radius:50px;font-size:1rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all var(--tr);display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:var(--earth-dark);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-outline{background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.3);color:#fff;padding:15px 36px;border-radius:50px;font-size:1rem;font-weight:500;text-decoration:none;cursor:pointer;transition:all var(--tr)}
+.btn-outline:hover{background:rgba(255,255,255,.22)}
+
+/* SECTIONS */
+section{padding:96px 0}.section-inner{max-width:1200px;margin:0 auto;padding:0 24px}
+.section-label{font-size:.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--terracotta);font-weight:600;margin-bottom:10px}
+.section-title{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:700;color:var(--charcoal);line-height:1.4;margin-bottom:12px}
+.section-desc{font-size:1.02rem;color:var(--warm-gray);max-width:580px;line-height:1.9}
+
+/* ADVANTAGES */
+#advantages{background:var(--sand-light)}
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.adv-card{background:#fff;border-radius:var(--radius);padding:36px 28px;text-align:center;box-shadow:var(--shadow-sm);transition:all var(--tr);border:1px solid rgba(139,115,85,.06)}
+.adv-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.adv-icon{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.8rem}
+.adv-card:nth-child(1) .adv-icon{background:linear-gradient(135deg,#fde8d8,#fcd5bc)}
+.adv-card:nth-child(2) .adv-icon{background:linear-gradient(135deg,#d8ede8,#bce0d8)}
+.adv-card:nth-child(3) .adv-icon{background:linear-gradient(135deg,#e8dff5,#d5c8f0)}
+.adv-card h3{font-family:var(--serif);font-size:1.2rem;font-weight:700;margin-bottom:10px}
+.adv-card p{font-size:.92rem;color:var(--warm-gray);line-height:1.8}
+
+/* GALLERY STRIP */
+.gallery-strip{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:0 0 16px;scrollbar-width:none}
+.gallery-strip::-webkit-scrollbar{display:none}
+.gallery-strip img{height:260px;width:auto;border-radius:var(--radius-sm);scroll-snap-align:start;flex-shrink:0;object-fit:cover}
+
+/* ROOMS */
+#rooms{background:var(--warm-white)}
+.room-section{margin-bottom:64px}.room-section:last-child{margin-bottom:0}
+.room-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center;margin-top:32px}
+.room-grid.reverse{direction:rtl}.room-grid.reverse>*{direction:ltr}
+.room-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;position:relative}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.room-img:hover img{transform:scale(1.03)}
+.room-info h3{font-family:var(--serif);font-size:1.5rem;font-weight:700;margin-bottom:14px}
+.room-info p{color:var(--warm-gray);line-height:1.9;margin-bottom:18px}
+.room-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:var(--sand);padding:7px 16px;border-radius:50px;font-size:.8rem;color:var(--earth);font-weight:500;display:flex;align-items:center;gap:5px}
+.room-thumbs{display:flex;gap:8px;margin-top:16px}
+.room-thumbs img{width:72px;height:54px;object-fit:cover;border-radius:8px;opacity:.7;cursor:pointer;transition:opacity var(--tr);border:2px solid transparent}
+.room-thumbs img:hover{opacity:1;border-color:var(--terracotta)}
+
+/* FLOOR PLAN */
+.floor-plan{background:var(--sand-light);border-radius:var(--radius);padding:44px;margin-top:48px}
+.floor-plan h3{font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:6px}
+.floor-plan-sub{color:var(--warm-gray);margin-bottom:28px;font-size:.95rem}
+.floor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px}
+.floor-item{background:#fff;border-radius:var(--radius-sm);padding:20px;text-align:center;box-shadow:var(--shadow-sm)}
+.floor-item .emoji{font-size:1.8rem;margin-bottom:8px}.floor-item h4{font-size:.95rem;font-weight:700;margin-bottom:4px}.floor-item p{font-size:.82rem;color:var(--warm-gray)}
+
+/* MAMA CHECK */
+.mama-check{background:#fff;border-radius:var(--radius);padding:44px;margin-top:40px;border:2px solid var(--cream)}
+.mama-check h3{font-family:var(--serif);font-size:1.3rem;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.check-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--radius-sm);background:var(--sand-light);font-size:.92rem}
+.check-icon{width:22px;height:22px;border-radius:50%;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0}
+
+/* EXPLORE */
+#explore{background:var(--sand-light)}
+.day-card{background:#fff;border-radius:var(--radius);padding:36px;margin-bottom:20px;box-shadow:var(--shadow-sm);border-left:4px solid var(--terracotta)}
+.day-card h3{font-family:var(--serif);font-size:1.2rem;font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.day-badge{background:var(--terracotta);color:#fff;padding:3px 12px;border-radius:50px;font-size:.72rem;font-family:var(--sans);font-weight:600}
+.timeline{display:flex;flex-direction:column;gap:14px}
+.tl-item{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:start}
+.tl-time{font-weight:600;font-size:.88rem;color:var(--ocean);padding-top:2px}
+.tl-content h4{font-size:.98rem;font-weight:600;margin-bottom:2px}.tl-content p{font-size:.88rem;color:var(--warm-gray)}
+.food-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:28px}
+.food-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:all var(--tr)}
+.food-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.food-img{height:160px;background:linear-gradient(135deg,var(--cream),var(--sand));display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.food-body{padding:20px}.food-body h4{font-family:var(--serif);font-size:1.05rem;font-weight:700;margin-bottom:6px}.food-body p{font-size:.88rem;color:var(--warm-gray);line-height:1.7}
+.food-tag{display:inline-block;margin-top:10px;padding:3px 10px;background:var(--sand);border-radius:50px;font-size:.75rem;color:var(--earth);font-weight:500}
+
+/* REVIEWS */
+#reviews{background:var(--warm-white)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:48px}
+.rev-card{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-sm);border:1px solid var(--cream);transition:all var(--tr)}
+.rev-card:hover{box-shadow:var(--shadow-md)}
+.rev-quote{font-size:2.5rem;color:var(--terracotta-soft);opacity:.25;font-family:Georgia,serif;line-height:1;margin-bottom:4px}
+.rev-text{font-size:.96rem;line-height:1.9;margin-bottom:18px;font-style:italic}
+.rev-stars{color:var(--gold);font-size:.82rem;letter-spacing:2px;margin-bottom:12px}
+.rev-author{display:flex;align-items:center;gap:10px}
+.rev-avatar{width:40px;height:40px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.rev-name{font-weight:600;font-size:.92rem}.rev-meta{font-size:.8rem;color:var(--warm-gray)}
+
+/* IG */
+.ig-section{padding:72px 0;background:var(--warm-white);overflow:hidden}
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:32px}
+.ig-item{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer}
+.ig-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ig-item:hover img{transform:scale(1.08)}.ig-item:hover .ig-ov{opacity:1}
+.ig-ov{position:absolute;inset:0;background:rgba(196,112,74,.6);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.4rem;opacity:0;transition:opacity var(--tr)}
+
+/* BOOKING */
+#booking{background:var(--sand-light)}
+.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:48px}
+.price-card{background:#fff;border-radius:var(--radius);padding:44px;box-shadow:var(--shadow-md);border-top:4px solid var(--terracotta)}
+.price-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin-bottom:6px}
+.price-amount{font-family:var(--serif);font-size:2.2rem;font-weight:900;color:var(--terracotta);margin:14px 0}
+.price-amount small{font-size:1rem;font-weight:400;color:var(--warm-gray)}
+.price-list{list-style:none;margin:20px 0}
+.price-list li{padding:9px 0;border-bottom:1px solid var(--cream);font-size:.93rem;display:flex;align-items:center;gap:9px}
+.price-list li:last-child{border-bottom:none}
+.policy-card{background:#fff;border-radius:var(--radius);padding:44px;box-shadow:var(--shadow-sm)}
+.policy-card h3{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin-bottom:22px}
+.pol-item{margin-bottom:20px}.pol-item h4{font-size:.98rem;font-weight:700;color:var(--earth);margin-bottom:4px;display:flex;align-items:center;gap:7px}
+.pol-item p{font-size:.88rem;color:var(--warm-gray);line-height:1.8}
+.legal-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--gold);border-radius:var(--radius-sm);padding:12px 20px;margin-top:16px}
+.legal-badge img{width:40px;height:40px;border-radius:6px;object-fit:cover}
+.legal-badge span{font-size:.85rem;font-weight:600;color:var(--earth-dark)}
+
+/* LEAD */
+.lead-magnet{background:linear-gradient(135deg,var(--ocean)0%,#4A7676 100%);border-radius:var(--radius);padding:52px;text-align:center;color:#fff;margin-top:48px;position:relative;overflow:hidden}
+.lead-magnet::before{content:'';position:absolute;top:-50%;right:-20%;width:400px;height:400px;border-radius:50%;background:rgba(255,255,255,.04)}
+.lead-magnet h3{font-family:var(--serif);font-size:1.6rem;font-weight:700;margin-bottom:10px;position:relative}
+.lead-magnet p{font-size:.98rem;opacity:.9;margin-bottom:28px;position:relative}
+.lead-btn{background:#fff;color:var(--ocean);padding:14px 36px;border-radius:50px;font-size:.98rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all var(--tr);position:relative}
+.lead-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+
+/* FOOTER */
+.footer{background:var(--charcoal);color:rgba(255,255,255,.7);padding:64px 0 28px}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 24px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand h3{font-family:var(--serif);font-size:1.2rem;color:#fff;margin-bottom:12px}
+.footer-brand p{font-size:.88rem;line-height:1.8}
+.footer-col h4{color:#fff;font-size:.85rem;font-weight:700;margin-bottom:14px;letter-spacing:1px;text-transform:uppercase}
+.footer-col a{display:block;color:rgba(255,255,255,.6);text-decoration:none;font-size:.88rem;margin-bottom:8px;transition:color var(--tr)}
+.footer-col a:hover{color:var(--terracotta-soft)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:.8rem}
+
+/* LINE FAB */
+.line-fab{position:fixed;bottom:24px;right:24px;z-index:900;background:#06C755;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(6,199,85,.4);text-decoration:none;transition:all var(--tr);animation:fp 2s ease-in-out infinite}
+.line-fab:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(6,199,85,.5)}
+@keyframes fp{0%,100%{box-shadow:0 4px 20px rgba(6,199,85,.4)}50%{box-shadow:0 4px 30px rgba(6,199,85,.6)}}
+.line-fab svg{width:34px;height:34px;fill:#fff}
+.fab-tip{position:absolute;right:72px;white-space:nowrap;background:var(--charcoal);color:#fff;padding:7px 14px;border-radius:8px;font-size:.8rem;font-weight:500;opacity:0;transition:opacity var(--tr);pointer-events:none}
+.line-fab:hover .fab-tip{opacity:1}
+
+/* ANIM */
+.fade-up{opacity:0;transform:translateY(28px);transition:all .65s cubic-bezier(.4,0,.2,1)}.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){.nav-links{display:none}.hamburger{display:block}.adv-grid{grid-template-columns:1fr;gap:16px}.room-grid,.room-grid.reverse{grid-template-columns:1fr;direction:ltr;gap:24px}.booking-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.ig-grid{grid-template-columns:repeat(3,1fr)}.floor-grid{grid-template-columns:repeat(2,1fr)}.lead-magnet{padding:36px 20px}section{padding:72px 0}}
+@media(max-width:600px){.hero h1{font-size:1.7rem}.hero-sub{font-size:.92rem}.hero-actions{flex-direction:column;align-items:center}.btn-primary,.btn-outline{width:100%;text-align:center;justify-content:center}.footer-grid{grid-template-columns:1fr}.reviews-grid,.food-grid{grid-template-columns:1fr}.tl-item{grid-template-columns:64px 1fr}.day-card{padding:24px 20px}.floor-plan,.mama-check{padding:28px 18px}.gallery-strip img{height:200px}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav"><div class="nav-inner"><a href="#" class="nav-logo">李寓<span>恆春的家</span></a><ul class="nav-links"><li><a href="#advantages">關於我們</a></li><li><a href="#rooms">房型空間</a></li><li><a href="#explore">在地體驗</a></li><li><a href="#reviews">房客真心話</a></li><li><a href="#booking">預約資訊</a></li><li><a href="#line-booking" class="nav-cta">立即預約</a></li></ul><button class="hamburger" onclick="toggleMobile()" aria-label="選單"><span></span><span></span><span></span></button></div></nav>
+<div class="mobile-menu" id="mm"><button class="mobile-close" onclick="toggleMobile()">✕</button><a href="#advantages" onclick="toggleMobile()">關於我們</a><a href="#rooms" onclick="toggleMobile()">房型空間</a><a href="#explore" onclick="toggleMobile()">在地體驗</a><a href="#reviews" onclick="toggleMobile()">房客真心話</a><a href="#booking" onclick="toggleMobile()">預約資訊</a><a href="#line-booking" onclick="toggleMobile()" style="color:var(--terracotta);font-weight:700">立即預約 →</a></div>
+
+<section class="hero" id="home"><div class="hero-bg"><img src="images/3泳池區4.jpg" alt="李寓恆春的家泳池" loading="eager"><div class="hero-overlay"></div></div><div class="hero-content"><div class="hero-badge">✦ 屏東合法民宿 No.1124 ✦ 恆春包棟</div><h1>在恆春，<br>給孩子與閨蜜<br>一場<em>不趕路</em>的旅行</h1><p class="hero-sub">包棟私密空間，不用擔心孩子吵到別人<br>泳池戲水、電動麻將、KTV歡唱——大人小孩都盡興<br>在地管家推薦，讓每一位媽媽都能真正放鬆</p><div class="hero-actions"><a href="#line-booking" class="btn-primary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>LINE 立即預約</a><a href="#rooms" class="btn-outline">探索空間 ↓</a></div></div></section>
+
+<section id="advantages"><div class="section-inner"><div class="fade-up" style="text-align:center"><div class="section-label">為什麼選擇李寓</div><div class="section-title">專為媽媽們設計的放鬆基地</div><p class="section-desc" style="margin:0 auto">我們理解帶孩子旅行的辛苦，所以把每個細節都想在前面。<br>在這裡，大人可以喘口氣，小孩可以盡情放電。</p></div><div class="adv-grid"><div class="adv-card fade-up"><div class="adv-icon">🏡</div><h3>包棟私密空間</h3><p>整棟都是你們的！不用怕小孩跑跳、不用壓低音量。客廳打麻將、庭院烤肉、泳池戲水，盡情享受。</p></div><div class="adv-card fade-up"><div class="adv-icon">🎉</div><h3>派對級娛樂設備</h3><p>電動麻將桌、專業KTV點歌系統、大電視影音——白天玩水放電，晚上歡唱同樂，一整天都精彩。</p></div><div class="adv-card fade-up"><div class="adv-icon">🗺️</div><h3>在地管家推薦</h3><p>不用做功課！老闆娘幫你整理好恆春私房景點、適合帶小孩的餐廳，讓旅行輕鬆不動腦。</p></div></div></div></section>
+
+<div style="padding:0 0 0 24px;background:var(--warm-white)"><div class="gallery-strip"><img src="images/1-1主頁.jpg" alt="泳池躺椅" loading="lazy"><img src="images/3泳池區2.jpg" alt="泳池球" loading="lazy"><img src="images/4客廳1.jpg" alt="客廳" loading="lazy"><img src="images/5廚房.jpg" alt="廚房" loading="lazy"><img src="images/3烤肉區2.jpg" alt="烤肉" loading="lazy"><img src="images/9文宣用-白牆與窗.jpg" alt="白牆" loading="lazy"><img src="images/4客廳窗外.jpg" alt="窗景" loading="lazy"><img src="images/9文宣用-無印風.jpg" alt="無印風" loading="lazy"></div></div>
+
+<section id="rooms"><div class="section-inner"><div class="fade-up"><div class="section-label">房型與空間</div><div class="section-title">每個角落，都是用心的痕跡</div><p class="section-desc">從泳池到廚房、從臥室到客廳，我們把「家」的溫度放進每一個空間。</p></div>
+
+<div class="room-section"><div class="room-grid fade-up"><div class="room-img"><img src="images/3泳池區4.jpg" alt="泳池全景" loading="lazy"></div><div class="room-info"><h3>私人泳池 & 戶外庭院</h3><p>馬賽克磁磚泳池搭配峇里島風躺椅，木質甲板上遮陽帆布。池畔就是烤肉區，傍晚邊烤肉邊看夕陽，恆春的慢生活從這裡開始。</p><div class="room-tags"><span class="tag">🏊 馬賽克泳池</span><span class="tag">🏖️ 躺椅遮陽傘</span><span class="tag">🔥 專業烤肉爐</span><span class="tag">🌅 戶外木甲板</span></div><div class="room-thumbs"><img src="images/1-1主頁.jpg" alt="泳池特寫" loading="lazy"><img src="images/3泳池區2.jpg" alt="泳池球" loading="lazy"><img src="images/3烤肉區2.jpg" alt="烤肉" loading="lazy"></div></div></div></div>
+
+<div class="room-section"><div class="room-grid reverse fade-up"><div class="room-img"><img src="images/4客廳1.jpg" alt="客廳" loading="lazy"></div><div class="room-info"><h3>歡聚客廳 & 娛樂空間</h3><p>寬敞客廳配備電動麻將桌、大尺寸電視與專業KTV點歌系統。實木長桌容納多人聚餐，工業風鐵管書架與暖色牆面營造溫馨又有個性的氛圍。</p><div class="room-tags"><span class="tag">🀄 電動麻將桌</span><span class="tag">🎤 專業KTV</span><span class="tag">📺 大電視</span><span class="tag">🪑 實木長桌</span></div><div class="room-thumbs"><img src="images/4電動麻將桌.jpg" alt="麻將桌" loading="lazy"><img src="images/4卡拉ok.jpg" alt="KTV" loading="lazy"><img src="images/4客廳窗外.jpg" alt="窗外" loading="lazy"></div></div></div></div>
+
+<div class="room-section"><div class="room-grid fade-up"><div class="room-img"><img src="images/5廚房.jpg" alt="廚房" loading="lazy"></div><div class="room-info"><h3>溫馨廚房 & 咖啡吧台</h3><p>開放式廚房搭配中島吧台，蜜桃色牆面配上木質色調，讓下廚也是享受。阿拉丁烤箱、微波爐、消毒鍋一應俱全，帶寶寶也能輕鬆準備餐點。</p><div class="room-tags"><span class="tag">🍳 完整廚具</span><span class="tag">☕ 咖啡設備</span><span class="tag">🧸 消毒鍋</span><span class="tag">🏝️ 中島吧台</span></div><div class="room-thumbs"><img src="images/5阿拉丁烤箱與微波爐.jpg" alt="烤箱" loading="lazy"><img src="images/1-3主頁.jpg" alt="餐桌" loading="lazy"></div></div></div></div>
+
+<div class="room-section"><div class="room-grid reverse fade-up"><div class="room-img"><img src="images/6-1二樓前_全景_側邊.jpg" alt="二樓臥室" loading="lazy"></div><div class="room-info"><h3>舒適臥室空間</h3><p>多間臥室風格各異：二樓清新格紋雙人房配有閱讀椅，三樓日式榻榻米四人房適合親子同睡，也有活潑掛毯風格的雙人房。每間獨立空調與柔和照明。</p><div class="room-tags"><span class="tag">🛏 雙人床房</span><span class="tag">🎌 日式榻榻米</span><span class="tag">❄️ 獨立空調</span><span class="tag">👶 嬰兒床可借</span></div><div class="room-thumbs"><img src="images/6-1二樓前_全景_正面.jpg" alt="二樓正面" loading="lazy"><img src="images/7-1三樓前_全景_-四人.jpg" alt="榻榻米" loading="lazy"><img src="images/7-2三樓後_全景_1.jpg" alt="三樓後房" loading="lazy"></div></div></div></div>
+
+<div class="floor-plan fade-up"><h3>📐 包棟配置總覽</h3><p class="floor-plan-sub">適合 2～4 個家庭同遊，最多可容納 8～10 人入住</p><div class="floor-grid"><div class="floor-item"><div class="emoji">🛏️</div><h4>臥室 × 3</h4><p>雙人床×2＋日式四人房</p></div><div class="floor-item"><div class="emoji">🚿</div><h4>衛浴</h4><p>乾濕分離・防滑地板</p></div><div class="floor-item"><div class="emoji">🛋️</div><h4>客廳</h4><p>麻將・KTV・大電視</p></div><div class="floor-item"><div class="emoji">🍳</div><h4>廚房</h4><p>完整廚具・中島吧台</p></div><div class="floor-item"><div class="emoji">🏊</div><h4>泳池區</h4><p>馬賽克泳池・躺椅</p></div><div class="floor-item"><div class="emoji">🔥</div><h4>烤肉區</h4><p>專業烤爐・池畔BBQ</p></div></div></div>
+
+<div class="mama-check fade-up"><h3>👩‍👧‍👦 媽媽必看：親子設備清單</h3><div class="check-grid"><div class="check-item"><div class="check-icon">✓</div>嬰兒床（需預約）</div><div class="check-item"><div class="check-icon">✓</div>奶瓶消毒鍋（小獅王）</div><div class="check-item"><div class="check-icon">✓</div>嬰兒澡盆</div><div class="check-item"><div class="check-icon">✓</div>兒童餐椅</div><div class="check-item"><div class="check-icon">✓</div>防滑地板設計</div><div class="check-item"><div class="check-icon">✓</div>兒童牙刷牙膏</div><div class="check-item"><div class="check-icon">✓</div>電蚊拍 / 防蚊液</div><div class="check-item"><div class="check-icon">✓</div>急救箱</div><div class="check-item"><div class="check-icon">✓</div>桌角防撞套</div><div class="check-item"><div class="check-icon">✓</div>繪本 & 玩具</div><div class="check-item"><div class="check-icon">✓</div>阿拉丁烤箱</div><div class="check-item"><div class="check-icon">✓</div>夜燈</div></div></div></div></section>
+
+<section id="explore"><div class="section-inner"><div class="fade-up"><div class="section-label">在地體驗</div><div class="section-title">老闆娘幫你排好了！</div><p class="section-desc">不用做功課、不用傷腦筋。精心整理的 3 天 2 夜親子行程，直接照著走就好。</p></div>
+<div style="margin-top:48px">
+<div class="day-card fade-up"><h3><span class="day-badge">Day 1</span> 抵達＋放慢腳步</h3><div class="timeline"><div class="tl-item"><div class="tl-time">14:00</div><div class="tl-content"><h4>入住李寓恆春的家</h4><p>放下行李，孩子先衝泳池放電，大人在躺椅上放空</p></div></div><div class="tl-item"><div class="tl-time">16:00</div><div class="tl-content"><h4>恆春老街散步</h4><p>逛古城門、吃綠豆蒜冰，感受南國慢活</p></div></div><div class="tl-item"><div class="tl-time">18:00</div><div class="tl-content"><h4>池畔BBQ之夜</h4><p>用專業烤爐來場池畔烤肉派對，或到鎮上親子餐廳用餐</p></div></div><div class="tl-item"><div class="tl-time">20:00</div><div class="tl-content"><h4>KTV歡唱＆麻將開桌</h4><p>孩子睡了，大人的夜生活才開始！唱歌、打牌、聊天到深夜</p></div></div></div></div>
+<div class="day-card fade-up"><h3><span class="day-badge">Day 2</span> 探索恆春半島</h3><div class="timeline"><div class="tl-item"><div class="tl-time">09:00</div><div class="tl-content"><h4>廚房早餐時光</h4><p>用中島吧台準備早餐，或到鎮上吃道地早點</p></div></div><div class="tl-item"><div class="tl-time">10:00</div><div class="tl-content"><h4>鹿境梅花鹿生態園</h4><p>小孩最愛！近距離餵食梅花鹿，超療癒</p></div></div><div class="tl-item"><div class="tl-time">12:00</div><div class="tl-content"><h4>隱藏版午餐</h4><p>避開觀光客的在地小店，CP值超高</p></div></div><div class="tl-item"><div class="tl-time">14:00</div><div class="tl-content"><h4>龍磐公園 / 風吹砂</h4><p>壯闊太平洋海景，全家拍照留念</p></div></div><div class="tl-item"><div class="tl-time">16:00</div><div class="tl-content"><h4>回民宿泳池玩水</h4><p>回到最放鬆的地方，讓孩子在水池裡玩到夠</p></div></div></div></div>
+<div class="day-card fade-up"><h3><span class="day-badge">Day 3</span> 慢慢收心・不趕路</h3><div class="timeline"><div class="tl-item"><div class="tl-time">09:00</div><div class="tl-content"><h4>悠閒的最後一個早晨</h4><p>不設鬧鐘，自然醒。給自己一杯好咖啡</p></div></div><div class="tl-item"><div class="tl-time">11:00</div><div class="tl-content"><h4>退房＆最後巡禮</h4><p>帶一份恆春伴手禮，把美好記憶打包回家</p></div></div></div></div>
+</div>
+<div class="fade-up" style="margin-top:48px"><h3 class="section-title" style="font-size:1.5rem">🍽️ 隱藏版美食地圖</h3><p class="section-desc">避開觀光客，這些才是在地人去的店。每一間都歡迎帶小孩！</p><div class="food-grid"><div class="food-card"><div class="food-img">🍜</div><div class="food-body"><h4>在地推薦餐廳 A</h4><p>恆春人的愛店，價格親民、份量大方，有兒童座椅。</p><span class="food-tag">👶 親子友善</span></div></div><div class="food-card"><div class="food-img">🥘</div><div class="food-body"><h4>在地推薦餐廳 B</h4><p>巷弄裡的好味道，食材新鮮、環境舒適乾淨。</p><span class="food-tag">🅿️ 好停車</span></div></div><div class="food-card"><div class="food-img">🧁</div><div class="food-body"><h4>下午茶推薦</h4><p>文青咖啡廳，有戶外座位讓孩子跑跳，媽媽安心喝咖啡。</p><span class="food-tag">☕ 媽媽最愛</span></div></div></div></div></div></section>
+
+<section id="reviews"><div class="section-inner"><div class="fade-up" style="text-align:center"><div class="section-label">房客真心話</div><div class="section-title">聽聽她們怎麼說</div><p class="section-desc" style="margin:0 auto">每一則評價，都是真實的溫度。</p></div><div class="reviews-grid"><div class="rev-card fade-up"><div class="rev-quote">"</div><p class="rev-text">帶兩個小小孩出門最怕吵到別人，包棟真的太棒了！孩子玩水玩到不想回家，老闆娘還幫我們準備了消毒鍋，超貼心。</p><div class="rev-stars">★★★★★</div><div class="rev-author"><div class="rev-avatar">👩</div><div><div class="rev-name">小花媽咪</div><div class="rev-meta">2個孩子的媽・2025年3月入住</div></div></div></div><div class="rev-card fade-up"><div class="rev-quote">"</div><p class="rev-text">閨蜜團超推！晚上客廳打麻將、唱KTV，白天帶小孩去泳池。環境很乾淨又好拍照，下次還要再來！</p><div class="rev-stars">★★★★★</div><div class="rev-author"><div class="rev-avatar">👩‍🦱</div><div><div class="rev-name">小珊</div><div class="rev-meta">閨蜜親子團・2025年2月入住</div></div></div></div><div class="rev-card fade-up"><div class="rev-quote">"</div><p class="rev-text">第一次帶寶寶住民宿很緊張，結果設備超齊全！嬰兒床、澡盆、消毒鍋都有。廚房超好用，中島吧台根本網美等級。</p><div class="rev-stars">★★★★★</div><div class="rev-author"><div class="rev-avatar">🤱</div><div><div class="rev-name">Amber</div><div class="rev-meta">新手媽媽・2025年1月入住</div></div></div></div><div class="rev-card fade-up"><div class="rev-quote">"</div><p class="rev-text">住過很多恆春民宿，這間的「生活感」最強。廚房超好用、泳池旁烤肉超讚，最棒的是晚上唱KTV小孩也跟著嗨！</p><div class="rev-stars">★★★★★</div><div class="rev-author"><div class="rev-avatar">👨‍👩‍👧‍👦</div><div><div class="rev-name">Kevin & Jess</div><div class="rev-meta">兩家庭同遊・2024年12月入住</div></div></div></div></div></div></section>
+
+<div class="ig-section"><div class="section-inner" style="text-align:center"><div class="section-label fade-up">追蹤我們的日常</div><div class="section-title fade-up">@leehouse.hengchun</div></div><div class="ig-grid"><div class="ig-item"><img src="images/1-1主頁.jpg" alt="" loading="lazy"><div class="ig-ov">♡</div></div><div class="ig-item"><img src="images/3泳池區2.jpg" alt="" loading="lazy"><div class="ig-ov">♡</div></div><div class="ig-item"><img src="images/4客廳1.jpg" alt="" loading="lazy"><div class="ig-ov">♡</div></div><div class="ig-item"><img src="images/7-1三樓前_全景_-四人.jpg" alt="" loading="lazy"><div class="ig-ov">♡</div></div><div class="ig-item"><img src="images/5廚房.jpg" alt="" loading="lazy"><div class="ig-ov">♡</div></div><div class="ig-item"><img src="images/9文宣用-白牆與窗.jpg" alt="" loading="lazy"><div class="ig-ov">♡</div></div></div></div>
+
+<section id="booking"><div class="section-inner"><div class="fade-up" style="text-align:center"><div class="section-label">預約指南</div><div class="section-title">簡單三步，開始你的恆春假期</div></div><div class="booking-grid"><div class="price-card fade-up"><h3>包棟房價</h3><p style="color:var(--warm-gray);font-size:.88rem">整棟獨享，不與他人共用</p><div class="price-amount">NT$ X,XXX <small>起 / 晚</small></div><ul class="price-list"><li>✦ 整棟獨立使用（含所有房間）</li><li>✦ 免費停車位</li><li>✦ 私人泳池＆烤肉爐</li><li>✦ 電動麻將桌＆KTV</li><li>✦ 親子設備免費提供</li><li>✦ 24小時管家LINE聯繫</li></ul><p style="font-size:.8rem;color:var(--warm-gray);margin-top:14px">＊ 連續假日與暑假期間價格另計<br>＊ 加人費用請洽詢老闆娘</p><div class="legal-badge"><img src="images/8合法民宿.jpg" alt="合法民宿" loading="lazy"><span>屏東縣政府合法民宿<br>編號：1124</span></div><a href="#line-booking" class="btn-primary" style="width:100%;text-align:center;justify-content:center;margin-top:20px">LINE 詢問房價 →</a></div><div class="policy-card fade-up"><h3>入住須知</h3><div class="pol-item"><h4>🕐 入住 / 退房時間</h4><p>入住：15:00 後 ｜ 退房：11:00 前<br>如需提早入住或延遲退房，請提前告知</p></div><div class="pol-item"><h4>💰 訂金與付款</h4><p>預訂後需支付50%訂金，餘款於入住當日支付。接受匯款與現金。</p></div><div class="pol-item"><h4>🔄 退訂政策</h4><p>入住前14天取消：全額退還訂金<br>入住前7-13天：退還50%<br>入住前7天內：恕不退還（可協助更改日期一次）</p></div><div class="pol-item"><h4>🐾 寵物政策</h4><p>歡迎乖乖的毛小孩！請事先告知，並維護環境整潔。</p></div><div class="pol-item"><h4>📞 聯絡方式</h4><p>LINE ID：@leehouse<br>電話：09XX-XXX-XXX<br>地址：屏東縣恆春鎮 XXX 路 XX 號</p></div></div></div>
+<div class="lead-magnet fade-up" id="line-booking"><h3>📍 免費下載：恆春在地親子地圖</h3><p>20+ 個私房景點、親子餐廳、隱藏美食，一張地圖全搞定！<br>加入 LINE 好友即可免費領取</p><a href="https://line.me/R/" class="lead-btn" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.83 2 10.5c0 4.22 3.74 7.75 8.78 8.42.34.07.82.23.94.52.11.27.07.68.03.95l-.15.91c-.05.27-.21 1.06.93.58 1.14-.49 6.15-3.62 8.39-6.2C22.59 13.73 22 12.18 22 10.5 22 5.83 17.52 2 12 2z"/></svg>加入 LINE 立即領取</a></div></div></section>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-grid"><div class="footer-brand"><h3>李寓恆春的家</h3><p>在恆春半島的靜謐角落，為你留一棟家。<br>專為親子旅遊、閨蜜出遊打造的包棟民宿。<br>屏東縣政府合法民宿 編號：1124</p></div><div class="footer-col"><h4>導覽</h4><a href="#home">首頁</a><a href="#rooms">房型空間</a><a href="#explore">在地體驗</a><a href="#reviews">房客真心話</a><a href="#booking">預約資訊</a></div><div class="footer-col"><h4>聯絡</h4><a href="#">LINE：@leehouse</a><a href="#">電話：09XX-XXX-XXX</a><a href="#">Email：hello@leehouse.tw</a></div><div class="footer-col"><h4>社群</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Google 評論</a></div></div><div class="footer-bottom">© 2025 李寓恆春的家 Lee House Hengchun. All Rights Reserved.</div></div></footer>
+
+<a href="https://line.me/R/" class="line-fab" target="_blank" rel="noopener" aria-label="LINE預約"><span class="fab-tip">LINE 立即預約 💬</span><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 5.83 2 10.5c0 4.22 3.74 7.75 8.78 8.42.34.07.82.23.94.52.11.27.07.68.03.95l-.15.91c-.05.27-.21 1.06.93.58 1.14-.49 6.15-3.62 8.39-6.2C22.59 13.73 22 12.18 22 10.5 22 5.83 17.52 2 12 2z"/></svg></a>
+
+<script>
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+function toggleMobile(){document.getElementById('mm').classList.toggle('active')}
+const obs=new IntersectionObserver(e=>{e.forEach((el,i)=>{if(el.isIntersecting){setTimeout(()=>el.target.classList.add('visible'),i*70);obs.unobserve(el.target)}})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t)window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})})});
+</script>
+</body>
+</html>
